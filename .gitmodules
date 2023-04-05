@@ -13,3 +13,4 @@
 [submodule "interpolatingsolver"]
 	path = interpolatingsolver
 	url = https://github.com/perebor/interpolatingsolver
+
