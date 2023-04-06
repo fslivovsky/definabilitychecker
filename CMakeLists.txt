@@ -19,8 +19,8 @@ include_directories(interrupt)
 
 add_subdirectory(interrupt)
 add_subdirectory(cadical_ipasir)
-add_subdirectory(abc-ufo)
-add_subdirectory(minisat)
+add_subdirectory(abc-ufo EXCLUDE_FROM_ALL)
+add_subdirectory(minisat EXCLUDE_FROM_ALL)
 add_subdirectory(avy)
 add_subdirectory(interpolatingsolver)
 
@@ -58,5 +58,7 @@ include_directories(cadical_ipasir)
 add_library(ITPsolver src/ITPsolver.h src/ITPsolver.cc)
 target_link_libraries(ITPsolver PRIVATE ${INTERPOLATING_SOLVER_LIBRARY})
 
-add_library(definabilitychecker src/definabilitychecker.h src/definabilitychecker.cc)
+add_library(definabilitychecker include/definabilitychecker.h src/definabilitychecker.cc)
 target_link_libraries(definabilitychecker PRIVATE ITPsolver cadical_library)
+
+install(TARGETS definabilitychecker DESTINATION lib)

@@ -10,6 +10,8 @@
 
 #include "utils.h"
 #include "logging.h"
+#include "cadical.h"
+#include "ITPsolver.h"
 
 namespace pedant {
 

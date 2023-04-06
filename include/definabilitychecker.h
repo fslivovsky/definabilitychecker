@@ -7,10 +7,12 @@
 #include <tuple>
 
 #include "solvertypes.h"
-#include "cadical.h"
-#include "ITPsolver.h"
 
 namespace pedant {
+
+// Forward declarations
+class ITPSolver;
+class CadicalSolver;
 
 class DefinabilityChecker {
 
